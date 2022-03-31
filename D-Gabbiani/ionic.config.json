@@ -1,0 +1,7 @@
+{
+  "name": "D-Gabbiani",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "angular"
+}

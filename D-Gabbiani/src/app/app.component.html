@@ -1,0 +1,79 @@
+<ion-app>
+  <ion-split-pane when="(min-width: 1500px)" contentId="main">
+    <!--  the side menu  -->
+    <ion-menu side="start" menuId="custom" contentId="main" class="my-custom-menu">
+      <ion-header>
+        <ion-toolbar color="tertiary">
+          <ion-title>Menu inicio</ion-title>
+        </ion-toolbar>
+      </ion-header>
+      <ion-content>
+        <ion-list>
+          <ion-menu-toggle [routerLink]="['/home']" >
+          <ion-item button="true" lines="none">
+            <ion-label>
+            Inicio
+          </ion-label>
+          <ion-icon slot="start" name="home-sharp" style=""></ion-icon>
+          </ion-item>
+          </ion-menu-toggle>
+          <ion-menu-toggle [routerLink]="['/login']">
+          <ion-item button="true" lines="none">
+            <ion-label>
+            login
+            </ion-label>
+            <ion-icon slot="start" name="people-circle" style=""></ion-icon>
+          </ion-item>
+          </ion-menu-toggle>
+          <ion-menu-toggle [routerLink]="['/envios']" >
+            <ion-item button="true" lines="none">
+              <ion-label>
+              envios
+            </ion-label>
+            <ion-icon slot="start" name="paper-plane-sharp" style=""></ion-icon>
+            </ion-item>
+            </ion-menu-toggle>
+            <ion-menu-toggle [routerLink]="['/pagos']" >
+          <ion-item button="true" lines="none">
+            <ion-label>
+            Pagos
+          </ion-label>
+          <ion-icon slot="start" name="card-sharp" style=""></ion-icon>
+          </ion-item>
+          </ion-menu-toggle>
+          <ion-menu-toggle [routerLink]="['/productos']" >
+            <ion-item button="true" lines="none">
+              <ion-label>
+              Productos
+            </ion-label>
+            <ion-icon slot="start" name="bag-handle-sharp" style=""></ion-icon>
+            </ion-item>
+            </ion-menu-toggle>
+            <ion-menu-toggle [routerLink]="['/reg-user']" >
+              <ion-item button="true" lines="none">
+                <ion-label>
+                registrar usuario
+              </ion-label>
+              <ion-icon slot="start" name="clipboard-sharp" style=""></ion-icon>
+              </ion-item>
+              </ion-menu-toggle>
+        </ion-list>
+      </ion-content>|
+    </ion-menu>
+    <ion-menu side="end" type="push" contentId="main">
+      <ion-header>
+        <ion-toolbar color="danger">
+          <ion-title>---</ion-title>
+        </ion-toolbar>
+      </ion-header>
+      <ion-content>
+        <ion-list>
+          <ion-item>---</ion-item>
+          <ion-item>---</ion-item>
+        </ion-list>
+      </ion-content>
+    </ion-menu>
+    <!-- the main content -->
+    <ion-router-outlet id="main"></ion-router-outlet>
+  </ion-split-pane>
+</ion-app>

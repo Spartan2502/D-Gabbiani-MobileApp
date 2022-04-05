@@ -1,9 +1,14 @@
 <ion-header>
   <ion-toolbar>
-    <ion-title>login</ion-title>
+    <ion-title>Login</ion-title>
   </ion-toolbar>
 </ion-header>
-
 <ion-content>
-
+  <div id="container">
+    <strong>Ingresa datos</strong><br>
+    <ion-input placeholder="Email"></ion-input><br>
+    <ion-input placeholder="Contraseña"></ion-input><br>
+    <ion-button [routerLink]="['/']">Registrar</ion-button>
+    <ion-button [routerLink]="['/home']">Salir</ion-button>
+  </div>
 </ion-content>

@@ -34,7 +34,8 @@ const routes: Routes = [
   {
     path: 'pagos',
     loadChildren: () => import('./pagos/pagos.module').then( m => m.PagosPageModule)
-  },  {
+  },
+  {
     path: 'user-perfil',
     loadChildren: () => import('./user-perfil/user-perfil.module').then( m => m.UserPerfilPageModule)
   },

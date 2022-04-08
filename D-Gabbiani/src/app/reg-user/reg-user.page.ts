@@ -1,4 +1,10 @@
 import { Component, OnInit } from '@angular/core';
+import {
+  FormGroup,
+  FormControl,
+  Validators,
+  FormBuilder,
+} from '@angular/forms';
 
 @Component({
   selector: 'app-reg-user',
@@ -7,9 +13,20 @@ import { Component, OnInit } from '@angular/core';
 })
 export class RegUserPage implements OnInit {
 
-  constructor() { }
+  formularioRegistro: FormGroup;
+
+  constructor(public fb: FormBuilder) {
+
+    this.formularioRegistro = this.fb.group({
+      'Nombre': new FormControl("",Validators.required),
+      'Email': new FormControl("",Validators.required),
+      'Contraseña': new FormControl("",Validators.required),
+    });
+   }
 
   ngOnInit() {
   }
-
+  registrar() {
+    //console.log('registrar');
+  }
 }

@@ -1,15 +1,20 @@
 <ion-header>
-  <ion-toolbar>
+  <ion-toolbar color="warning">
+    <ion-buttons slot="start">
+      <ion-back-button></ion-back-button>
+    </ion-buttons>
     <ion-title>Login</ion-title>
   </ion-toolbar>
 </ion-header>
 <ion-content>
-  <div id="container">
-    <img src="../../assets/D' Gabbiani.png" alt="ola"><br>
-    <strong>Ingresa datos</strong><br>
-    <ion-input placeholder="Email"></ion-input><br>
-    <ion-input placeholder="Contraseña"></ion-input><br>
-    <ion-button hrf="#">Iniciar</ion-button>
-    <ion-button [routerLink]="['/home']">Salir</ion-button>
-  </div>
+    <form [formGroup]="formularioLogin">
+      <div id="container">
+        <img src="../../assets/D' Gabbiani.png" alt="ola"><br>
+        <strong>Ingresa datos</strong><br>
+        <ion-input formControlName="Email" placeholder="Email"></ion-input><br>
+        <ion-input formControlName="Contraseña" placeholder="Contraseña"></ion-input><br>
+        <ion-button (click)="iniciar">Iniciar</ion-button>
+        <ion-button [routerLink]="['/reg-user']">Registrarse</ion-button>
+      </div>
+    </form>
 </ion-content>

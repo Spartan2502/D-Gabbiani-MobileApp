@@ -1,28 +1,26 @@
 <ion-header>
-  <ion-toolbar>
+  <ion-toolbar color="primary">
+    <ion-buttons slot="start">
+      <ion-back-button></ion-back-button>
+    </ion-buttons>
     <ion-title>Registrar usuario</ion-title>
   </ion-toolbar>
 </ion-header>
 
 <ion-content>
-  <div id="container">
-    <strong>Ingresa datos</strong>
-    <br>
-    <br>
-    <ion-input placeholder="Nombre"></ion-input>
-    <br>
-    <ion-input type="email" placeholder="Email"></ion-input>
-    <br>
-    <ion-input type="password" placeholder="Contraseña"></ion-input>
-    <br>
-    <ion-input type="date" placeholder="Fecha nacimiento"></ion-input>
-    <br>
-    <ion-input type="" placeholder="Numero"></ion-input>
-    <br>
-    <ion-input placeholder="Direccion"></ion-input>
-    <br>
-    <ion-button [routerLink]="['/']">Registrar</ion-button>
-    <br>
-    <ion-button [routerLink]="['/home']">Cancelar</ion-button>
-  </div>
+  <form [formGroup]="formularioRegistro">
+    <div id="container">
+      <strong>Ingresa datos</strong>
+      <br>
+      <br>
+      <ion-input formControlName="Nombre" placeholder="Nombre"></ion-input>
+      <br>
+      <ion-input formControlName="Email" type="email" placeholder="Email"></ion-input>
+      <br>
+      <ion-input formControlName="Contraseña" type="password" placeholder="Contraseña"></ion-input>
+      <br>
+      <ion-button (click)="registrar()">Registrar</ion-button>
+      <ion-button [routerLink]="['/home']">Cancelar</ion-button>
+    </div>
+  </form>
 </ion-content>

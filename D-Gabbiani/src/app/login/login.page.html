@@ -12,8 +12,8 @@
         <img src="../../assets/D' Gabbiani.png" alt="ola"><br>
         <strong>Ingresa datos</strong><br>
         <ion-input formControlName="Email" placeholder="Email"></ion-input><br>
-        <ion-input formControlName="Contraseña" placeholder="Contraseña"></ion-input><br>
-        <ion-button (click)="iniciar">Iniciar</ion-button>
+        <ion-input type='password' formControlName="Contraseña" placeholder="Contraseña"></ion-input><br>
+        <ion-button (click)="login()">Iniciar</ion-button>
         <ion-button [routerLink]="['/reg-user']">Registrarse</ion-button>
       </div>
     </form>
